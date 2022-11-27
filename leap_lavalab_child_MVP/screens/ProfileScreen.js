@@ -8,35 +8,42 @@ import warningIcon from '../assets/warningIcon.png';
 import BottomSheet, {BottomSheetView} from '@gorhom/bottom-sheet';
 
 import { initializeApp } from 'firebase/app';
-import {getFirestore, setDoc, doc, collection, query, getDoc} from 'firebase/firestore';
+import {getFirestore, setDoc, doc, collection, query, getDoc, onSnapshot} from 'firebase/firestore';
 
 
 function ProfileScreen(props) {
 
   useEffect(() => {
     // write your code here, it's like componentWillMount
-    onScreenLoad();
+    onScreenLoad();    
   }, [])
+
 
   const onScreenLoad = async()=>{
     const firestore = getFirestore(app);
+
     const docRef = doc(firestore, "users", "features");
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
-      console.log("Document data:", docSnap.data().childSpendingLimit);
-      setLimitValue(docSnap.data().childSpendingLimit/300);
+    //   console.log("Document data:", docSnap.data().childSpendingLimit);
       setRange(docSnap.data().childSpendingLimit/300);
       
     } else {
       // doc.data() will be undefined in this case
       console.log("No such document!");
     }
+
+    const listener = onSnapshot(doc(firestore, "users", "features"), (doc) => {
+      console.log("Realtime data: ", doc.data());
+      setRange(doc.data().childSpendingLimit/300);
+    });
   }
 
+  
+
+
   const sheetRef = useRef(null);
-  const [isOpen, setIsOpen] = useState(true);
-  const [limitValue, setLimitValue] = useState(0);
 
   const snapPoints = ['50%','80%'];
   // const handleSheetChanges = useCallback((index: number) => {
