@@ -104,57 +104,57 @@ function ProfileScreen(props) {
 const Example = () => {
     const data = [{
       id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-      fullName: "Review Action",
-      timeStamp: "12:47 PM",
-      recentText: "Transaction above limit attempted!",
+      fullName: "Review Action from Nov 28, 12:47 PM",
+      timeStamp: "",
+      recentText: "You made a purchase at Dulce, you are now in the Red Zone for food!",
       image: warningIcon
     }, {
       id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-      fullName: "Review Action",
-      timeStamp: "11:11 PM",
-      recentText: "Transaction above limit attempted!",
+      fullName: "Review Action from Nov 23, 8:32 PM",
+      timeStamp: "",
+      recentText: "Transaction above limit attempted at Target!",
       image: warningIcon
     }, {
       id: "58694a0f-3da1-471f-bd96-145571e29d72",
-      fullName: "Review Action",
-      timeStamp: "6:22 PM",
-      recentText: "Transaction above limit attempted!",
+      fullName: "Review Action from Nov 20, 11:32 AM",
+      timeStamp: "",
+      recentText: "You made a purchase at Starbucks, you are now in the Yellow Zone for food!",
       image: warningIcon
     }, {
-      id: "68694a0f-3da1-431f-bd56-142371e29d72",
-      fullName: "Dulce",
-      timeStamp: "8:56 PM",
-      recentText: "Transaction above limit attempted!",
+      id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
+      fullName: "Review Action from Nov 18, 12:47 PM",
+      timeStamp: "",
+      recentText: "You made a purchase at Dulce, you are now in the Yellow Zone for food!",
       image: warningIcon
     }, {
-      id: "28694a0f-3da1-471f-bd96-142456e29d72",
-      fullName: "Review Action",
-      timeStamp: "6:22 PM",
-      recentText: "Transaction above limit attempted!",
+      id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+      fullName: "Review Action from Nov 12, 8:32 PM",
+      timeStamp: "",
+      recentText: "Transaction above limit attempted at Apple!",
       image: warningIcon
     }, {
-      id: "28694a0f-3da1-471f-bd96-142456e29d76",
-      fullName: "Review Action",
-      timeStamp: "6:22 PM",
-      recentText: "Transaction above limit attempted!",
+      id: "58694a0f-3da1-471f-bd96-145571e29d72",
+      fullName: "Review Action from Nov 10, 11:32 AM",
+      timeStamp: "",
+      recentText: "You made a purchase at Starbucks, you are approaching the Yellow Zone for food!",
       image: warningIcon
     }, {
-      id: "68694a0f-3da1-431f-bd56-142371e29d78",
-      fullName: "Review Action",
-      timeStamp: "8:56 PM",
-      recentText: "Transaction above limit attempted!",
+      id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
+      fullName: "Review Action from Oct 28, 12:47 PM",
+      timeStamp: "",
+      recentText: "You made a purchase at Dulce, you are now in the Red Zone for food!",
       image: warningIcon
     }, {
-      id: "28694a0f-3da1-471f-bd96-142456e29d79",
-      fullName: "Review Action",
-      timeStamp: "6:22 PM",
-      recentText: "Transaction above limit attempted!",
+      id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+      fullName: "Review Action from Oct 23, 8:32 PM",
+      timeStamp: "",
+      recentText: "Transaction above limit attempted at Target!",
       image: warningIcon
     }, {
-      id: "28694a0f-3da1-471f-bd96-142456e29d73",
-      fullName: "Review Action",
-      timeStamp: "6:22 PM",
-      recentText: "Transaction above limit attempted!",
+      id: "58694a0f-3da1-471f-bd96-145571e29d72",
+      fullName: "Review Action from Oct 20, 11:32 AM",
+      timeStamp: "",
+      recentText: "You made a purchase at Starbucks, you are now in the Yellow Zone for food!",
       image: warningIcon
     }];
     return <Box height='500' p="5" pb="2">
@@ -162,8 +162,8 @@ const Example = () => {
         item
       }) => <Box style={{backgroundColor:'orange'}} borderBottomWidth="1" _dark={{
         borderColor: "muted.50"
-      }} borderColor="muted.800" pl={["2", "4"]} pr={["0", "5"]} py="2">
-              <HStack space={[12, 3]} justifyContent="space-between">
+      }} borderColor="muted.800" pl={["2", "5"]} pr={["100", "10"]} py="2">
+              <HStack space={[3, 0]} justifyContent="space-between">
                 <Avatar size="48px" source={item.image} />
                 <VStack>
                   <Text _dark={{

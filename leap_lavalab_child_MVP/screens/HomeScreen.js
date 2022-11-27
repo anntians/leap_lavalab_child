@@ -2,6 +2,7 @@ import { Box, Heading, FlatList, HStack, Avatar, VStack, Spacer, NativeBaseProvi
 import React, {useCallback, useRef, useState} from 'react';
 import { Image, View,StyleSheet, Text, Dimensions } from 'react-native';
 import BottomSheet, { BottomSheetFlatList, BottomSheetView } from "@gorhom/bottom-sheet";
+// import WalletManager from 'react-native-wallet-manager';
 
 
 
@@ -27,27 +28,11 @@ function HomeScreen(props) {
 
   const sheetRef = useRef(null);
   const snapPoints = ["34%", "80%"];
+  
+
+
 
     return (
-        // <NativeBaseProvider>
-        //   <View style = {styles.container}>
-        //       <Text style = {styles.card_text}>Card: </Text>
-        //       <Image resizeMode='contain' style = {styles.card_image} source={Card}/>
-        //       <Text style = {styles.overview_text}>Overview: </Text>
-        //       <MyProgressChart/>
-        //       <Text style = {styles.transaction_text}>Transactions: </Text>
-              
-        //       <BottomSheet
-        //         ref={useRef<BottomSheet>(null)}
-        //         snapPoints = {snapPoints}
-        //       >
-        //         <BottomSheetView>
-        //           <Text>Hi</Text>
-        //         </BottomSheetView>
-        //       </BottomSheet>
-              
-        //   </View>
-        // </NativeBaseProvider>
 
       <NativeBaseProvider>
         <View style = {styles.container}>
@@ -78,83 +63,85 @@ function HomeScreen(props) {
 const MyProgressChart = () => {
   return (
     <>
+
       <ProgressChart
-        data={[0.8]}
-        width={Dimensions.get('window').width - 16}
+        data={{labels:['Oct', 'Nov'], data:[0.8, 0.6]}}
+        width={Dimensions.get('window').width-50}
         height={150}
         chartConfig={{
           backgroundColor: 'red',
           backgroundGradientFrom: 'white',
           backgroundGradientTo: 'white',
           decimalPlaces: 2,
+          
           color: (opacity = 1) => `rgba(160, 230, 149, ${opacity})`,
           style: {
-            borderRadius: 16,
+            borderRadius: 50,
           },
         }}
         style={{
           marginVertical: 8,
-          borderRadius: 16,
-          padding: 10
+          borderRadius: 5,
+          padding: 10,
+          width: -40
         }}
       />
     </>
   );
 };
-
 const Example = () => {
   const data = [{
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
     fullName: "Starbucks",
-    timeStamp: "12:47 PM",
+    timeStamp: "Nov 28, 12:47 PM",
     recentText: "$4.58",
     image: StarBucks
   }, {
     id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
     fullName: "Cava (Child)",
-    timeStamp: "11:11 PM",
+    timeStamp: "Nov 27, 11:11 PM",
     recentText: "$11.56",
     image: Cava
   }, {
     id: "58694a0f-3da1-471f-bd96-145571e29d72",
     fullName: "Honey Bird",
-    timeStamp: "6:22 PM",
+    timeStamp: "Nov 26, 6:22 PM",
     recentText: "$8.89",
     image: HoneyBird
   }, {
     id: "68694a0f-3da1-431f-bd56-142371e29d72",
     fullName: "Dulce (Child)",
-    timeStamp: "8:56 PM",
+    timeStamp: "Nov 25, 8:56 PM",
     recentText: "$4.78",
     image: Dulce
   }, {
     id: "28694a0f-3da1-471f-bd96-142456e29d72",
     fullName: "Starbucks",
-    timeStamp: "6:22 PM",
+    timeStamp: "Nov 25, 6:22 PM",
     recentText: "$8.89",
     image: StarBucks
   }, {
     id: "28694a0f-3da1-471f-bd96-142456e29d76",
     fullName: "Honey Bird",
-    timeStamp: "6:22 PM",
+    timeStamp: "Nov 24, 6:22 PM",
     recentText: "$8.89",
     image: HoneyBird
   }, {
     id: "68694a0f-3da1-431f-bd56-142371e29d78",
     fullName: "Dulce (Child)",
-    timeStamp: "8:56 PM",
+    timeStamp: "Nov 23, 8:56 PM",
     recentText: "$4.78",
     image: Dulce
   }, {
     id: "28694a0f-3da1-471f-bd96-142456e29d79",
     fullName: "Honey Bird",
-    timeStamp: "6:22 PM",
+    timeStamp: "Nov 22, 6:22 PM",
     recentText: "$8.89",
     image: HoneyBird
   }, {
     id: "28694a0f-3da1-471f-bd96-142456e29d73",
     fullName: "Honey Bird",
-    timeStamp: "6:22 PM",
+    timeStamp: "Nov 22, 6:22 PM",
     recentText: "$8.89",
     image: HoneyBird
   }];
@@ -164,7 +151,7 @@ const Example = () => {
     }) => <Box borderBottomWidth="1" _dark={{
       borderColor: "muted.50"
     }} borderColor="muted.800" pl={["0", "4"]} pr={["0", "5"]} py="2">
-            <HStack space={[12, 3]} justifyContent="space-between">
+            <HStack space={[3, 0]} justifyContent="space-between">
               <Avatar size="48px" source={item.image} />
               <VStack>
                 <Text _dark={{
@@ -188,6 +175,7 @@ const Example = () => {
           </Box>} keyExtractor={item => item.id} />
     </Box>;
 };
+
 
 
 
