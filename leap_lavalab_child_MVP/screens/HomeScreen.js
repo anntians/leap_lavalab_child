@@ -79,7 +79,7 @@ const MyProgressChart = () => {
   return (
     <>
       <ProgressChart
-        data={[0.6, 0.9]}
+        data={[0.8]}
         width={Dimensions.get('window').width - 16}
         height={150}
         chartConfig={{
