@@ -7,6 +7,7 @@ import BottomSheet, { BottomSheetFlatList, BottomSheetView } from "@gorhom/botto
 
 
 import Card from '../assets/card.png';
+import Wallet from '../assets/addtowallet.png';
 import StarBucks from '../assets/starbucks.png';
 import Cava from '../assets/cava.png';
 import HoneyBird from '../assets/honeybird.png';
@@ -27,7 +28,7 @@ import {
 function HomeScreen(props) {
 
   const sheetRef = useRef(null);
-  const snapPoints = ["34%", "80%"];
+  const snapPoints = ["32%", "80%"];
   
 
 
@@ -37,8 +38,10 @@ function HomeScreen(props) {
       <NativeBaseProvider>
         <View style = {styles.container}>
         
-        <Text style = {styles.card_text}>Card: </Text>
+        <Text style = {styles.card_text}>Card </Text>
         <Image resizeMode='contain' style = {styles.card_image} source={Card}/>
+        <Image resizeMode='contain' style = {styles.wallet} source={Wallet}/>
+
         <Text style = {styles.overview_text}>Overview Spending Compared to Limit: </Text>
         <MyProgressChart/>
 
@@ -74,7 +77,7 @@ const MyProgressChart = () => {
           backgroundGradientTo: 'white',
           decimalPlaces: 2,
           
-          color: (opacity = 1) => `rgba(160, 230, 149, ${opacity})`,
+          color: (opacity = 1) => `rgba(150,213,123, ${opacity})`,
           style: {
             borderRadius: 50,
           },
@@ -82,7 +85,7 @@ const MyProgressChart = () => {
         style={{
           marginVertical: 8,
           borderRadius: 5,
-          padding: 10,
+          padding: 15,
           width: -40
         }}
       />
@@ -187,6 +190,13 @@ const styles = StyleSheet.create({
         top: 20,
         bottom: 20
     },
+    wallet:{
+      width: '20%',
+      height: '5%',
+      // backgroundColor: "green",
+      top: 15,
+      bottom: 0
+  },
     container: {
         alignItems: 'center',
         flex: 1,

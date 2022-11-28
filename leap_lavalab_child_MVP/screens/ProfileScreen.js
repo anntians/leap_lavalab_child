@@ -45,7 +45,7 @@ function ProfileScreen(props) {
 
   const sheetRef = useRef(null);
 
-  const snapPoints = ['50%','80%'];
+  const snapPoints = ['60%','80%'];
   // const handleSheetChanges = useCallback((index: number) => {
   //   console.log('handleSheetChanges', index);
   // }, []);
@@ -71,7 +71,6 @@ function ProfileScreen(props) {
       <NativeBaseProvider>
       
       <View style = {styles.container}>
-        <Text style = {styles.title}>Profile</Text>
         <Text style = {styles.overview_text}>Current Credit Score:</Text>
         <View style={styles.circle}> 
           <Text style={styles.score}>714</Text>

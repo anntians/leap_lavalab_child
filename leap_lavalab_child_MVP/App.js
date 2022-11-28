@@ -6,17 +6,25 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import TriviaScreen from './screens/TriviaScreen';
+
 
 function HomeTab() {
   return (
       <HomeScreen/>
-
   );
 }
 
 function ProfileTab() {
   return (
     <ProfileScreen/>
+    // <Text>Hi</Text>
+  );
+}
+
+function TriviaTab() {
+  return (
+    <TriviaScreen/>
     // <Text>Hi</Text>
   );
 }
@@ -38,16 +46,21 @@ export default function App() {
             } else if (route.name === 'Profile') {
               iconName = focused ? 'person' : 'person-outline';
             }
+            else if (route.name === 'Trivia') {
+              iconName = focused ? 'help' : 'help-outline';
+            }
 
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
-          tabBarActiveTintColor: 'green',
+          tabBarActiveTintColor: '#A0D995',
           tabBarInactiveTintColor: 'gray',
         })}
       >
         <Tab.Screen name="Home" component={HomeTab} />
         <Tab.Screen name="Profile" component={ProfileTab} />
+        <Tab.Screen name="Trivia" component={TriviaTab} />
+
       </Tab.Navigator>
     </NavigationContainer>
   );
