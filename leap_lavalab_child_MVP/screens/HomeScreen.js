@@ -101,7 +101,7 @@ const Example = () => {
     image: StarBucks
   }, {
     id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-    fullName: "Cava (Child)",
+    fullName: "Cava",
     timeStamp: "Nov 27, 11:11 PM",
     recentText: "$11.56",
     image: Cava
@@ -113,12 +113,12 @@ const Example = () => {
     image: HoneyBird
   }, {
     id: "68694a0f-3da1-431f-bd56-142371e29d72",
-    fullName: "Dulce (Child)",
+    fullName: "Dulce",
     timeStamp: "Nov 25, 8:56 PM",
     recentText: "$4.78",
     image: Dulce
   }, {
-    id: "28694a0f-3da1-471f-bd96-142456e29d72",
+    id: "28694a0f-3da1-471f-bd96-142456e22d72",
     fullName: "Starbucks",
     timeStamp: "Nov 25, 6:22 PM",
     recentText: "$8.89",
@@ -131,7 +131,7 @@ const Example = () => {
     image: HoneyBird
   }, {
     id: "68694a0f-3da1-431f-bd56-142371e29d78",
-    fullName: "Dulce (Child)",
+    fullName: "Dulce",
     timeStamp: "Nov 23, 8:56 PM",
     recentText: "$4.78",
     image: Dulce
@@ -148,7 +148,7 @@ const Example = () => {
     recentText: "$8.89",
     image: HoneyBird
   }];
-  return <Box height={500} p="5" pb="2">
+  return <Box height={600} p="5" pb="2">
       <FlatList data={data} renderItem={({
       item
     }) => <Box borderBottomWidth="1" _dark={{
