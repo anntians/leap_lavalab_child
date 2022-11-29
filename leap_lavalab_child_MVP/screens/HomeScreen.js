@@ -147,6 +147,54 @@ const Example = () => {
     timeStamp: "Nov 22, 6:22 PM",
     recentText: "$8.89",
     image: HoneyBird
+  }, {
+    id: "28694a0f-3da1-471f-1d96-142456e29d73",
+    fullName: "Honey Bird",
+    timeStamp: "Nov 22, 6:22 PM",
+    recentText: "$8.89",
+    image: HoneyBird
+  }, {
+    id: "68694a0f-3da1-431f-bd56-242371e29d78",
+    fullName: "Dulce",
+    timeStamp: "Nov 23, 8:56 PM",
+    recentText: "$4.78",
+    image: Dulce
+  }, {
+    id: "28694a0f-3da1-471f-bd96-342456e22d72",
+    fullName: "Starbucks",
+    timeStamp: "Nov 25, 6:22 PM",
+    recentText: "$8.89",
+    image: StarBucks
+  }, {
+    id: "3ac68afc-c605-48d3-a4f8-4bd91aa97f63",
+    fullName: "Cava",
+    timeStamp: "Nov 27, 11:11 PM",
+    recentText: "$11.56",
+    image: Cava
+  }, {
+    id: "28694a0f-3da1-471f-1d96-542456e29d73",
+    fullName: "Honey Bird",
+    timeStamp: "Nov 22, 6:22 PM",
+    recentText: "$8.89",
+    image: HoneyBird
+  }, {
+    id: "68694a0f-3da1-431f-bd56-642371e29d78",
+    fullName: "Dulce",
+    timeStamp: "Nov 23, 8:56 PM",
+    recentText: "$4.78",
+    image: Dulce
+  }, {
+    id: "28694a0f-3da1-471f-bd96-742456e22d72",
+    fullName: "Starbucks",
+    timeStamp: "Nov 25, 6:22 PM",
+    recentText: "$8.89",
+    image: StarBucks
+  }, {
+    id: "3ac68afc-c605-48d3-a4f8-8bd91aa97f63",
+    fullName: "Cava",
+    timeStamp: "Nov 27, 11:11 PM",
+    recentText: "$11.56",
+    image: Cava
   }];
   return <Box height={600} p="5" pb="2">
       <FlatList data={data} renderItem={({

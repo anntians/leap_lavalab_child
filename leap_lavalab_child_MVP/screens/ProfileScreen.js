@@ -155,6 +155,54 @@ const Example = () => {
       timeStamp: "",
       recentText: "You made a purchase at Starbucks, you are now in the Yellow Zone for food!",
       image: warningIcon
+    }, {
+      id: "58694a0f-3da1-471f-bd96-245571e29d76",
+      fullName: "Review Action from Oct 20, 11:32 AM",
+      timeStamp: "",
+      recentText: "You made a purchase at Starbucks, you are now in the Yellow Zone for food!",
+      image: warningIcon
+    }, {
+      id: "58694a0f-3da1-471f-bd96-345571e29d76",
+      fullName: "Review Action from Oct 20, 11:32 AM",
+      timeStamp: "",
+      recentText: "You made a purchase at Starbucks, you are now in the Yellow Zone for food!",
+      image: warningIcon
+    }, {
+      id: "58694a0f-3da1-471f-bd96-445571e29d76",
+      fullName: "Review Action from Oct 20, 11:32 AM",
+      timeStamp: "",
+      recentText: "You made a purchase at Starbucks, you are now in the Yellow Zone for food!",
+      image: warningIcon
+    }, {
+      id: "58694a0f-3da1-471f-bd96-545571e29d76",
+      fullName: "Review Action from Oct 20, 11:32 AM",
+      timeStamp: "",
+      recentText: "You made a purchase at Starbucks, you are now in the Yellow Zone for food!",
+      image: warningIcon
+    }, {
+      id: "58694a0f-3da1-471f-bd96-645571e29d76",
+      fullName: "Review Action from Oct 20, 11:32 AM",
+      timeStamp: "",
+      recentText: "You made a purchase at Starbucks, you are now in the Yellow Zone for food!",
+      image: warningIcon
+    }, {
+      id: "58694a0f-3da1-471f-bd96-745571e29d76",
+      fullName: "Review Action from Oct 20, 11:32 AM",
+      timeStamp: "",
+      recentText: "You made a purchase at Starbucks, you are now in the Yellow Zone for food!",
+      image: warningIcon
+    }, {
+      id: "58694a0f-3da1-471f-bd96-845571e29d76",
+      fullName: "Review Action from Oct 20, 11:32 AM",
+      timeStamp: "",
+      recentText: "You made a purchase at Starbucks, you are now in the Yellow Zone for food!",
+      image: warningIcon
+    }, {
+      id: "58694a0f-3da1-471f-bd96-945571e29d76",
+      fullName: "Review Action from Oct 20, 11:32 AM",
+      timeStamp: "",
+      recentText: "You made a purchase at Starbucks, you are now in the Yellow Zone for food!",
+      image: warningIcon
     }];
     return <Box height='500' p="5" pb="2">
         <FlatList data={data} renderItem={({
