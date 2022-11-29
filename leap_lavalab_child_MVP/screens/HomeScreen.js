@@ -28,7 +28,7 @@ import {
 function HomeScreen(props) {
 
   const sheetRef = useRef(null);
-  const snapPoints = ["32%", "80%"];
+  const snapPoints = ["31%", "80%"];
   
 
 
