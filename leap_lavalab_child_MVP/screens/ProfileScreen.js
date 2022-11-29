@@ -75,7 +75,7 @@ function ProfileScreen(props) {
         <LinearGradient
         // Button Linear Gradient
         colors={['#A0D995', '#4CACBC']}
-        end = {{x:.9, y:.1}}
+        end = {{x:1.05, y:1.1}}
         style={styles.circle}>
           <Text style={styles.score}>714</Text>
       </LinearGradient>

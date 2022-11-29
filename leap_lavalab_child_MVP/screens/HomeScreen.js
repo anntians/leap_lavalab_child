@@ -28,7 +28,7 @@ import {
 function HomeScreen(props) {
 
   const sheetRef = useRef(null);
-  const snapPoints = ["30%", "5%", "80%"];
+  const snapPoints = ["30%", "80%"];
   
 
 
@@ -235,8 +235,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '35%',
         // backgroundColor: "green",
-        top: 20,
-        bottom: 20
+        top: 10,
+        paddingBottom:10,
     },
     wallet:{
       width: '20%',
