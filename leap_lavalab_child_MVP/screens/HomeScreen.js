@@ -28,7 +28,7 @@ import {
 function HomeScreen(props) {
 
   const sheetRef = useRef(null);
-  const snapPoints = ["31%", "80%"];
+  const snapPoints = ["30%", "5%", "80%"];
   
 
 
@@ -199,7 +199,7 @@ const Example = () => {
   return <Box height={600} p="5" pb="2">
       <FlatList data={data} renderItem={({
       item
-    }) => <Box borderBottomWidth="1" _dark={{
+    }) => <Box borderBottomWidth="0" _dark={{
       borderColor: "muted.50"
     }} borderColor="muted.800" pl={["0", "4"]} pr={["0", "5"]} py="2">
             <HStack space={[3, 0]} justifyContent="space-between">

@@ -6,7 +6,7 @@ import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 import { disableExpoCliLogging } from 'expo/build/logs/Logs';
 import warningIcon from '../assets/warningIcon.png';
 import BottomSheet, {BottomSheetView} from '@gorhom/bottom-sheet';
-
+import { LinearGradient } from 'expo-linear-gradient';
 import { initializeApp } from 'firebase/app';
 import {getFirestore, setDoc, doc, collection, query, getDoc, onSnapshot} from 'firebase/firestore';
 
@@ -45,7 +45,7 @@ function ProfileScreen(props) {
 
   const sheetRef = useRef(null);
 
-  const snapPoints = ['60%','80%'];
+  const snapPoints = ['57%','80%'];
   // const handleSheetChanges = useCallback((index: number) => {
   //   console.log('handleSheetChanges', index);
   // }, []);
@@ -72,14 +72,23 @@ function ProfileScreen(props) {
       
       <View style = {styles.container}>
         <Text style = {styles.overview_text}>Current Credit Score:</Text>
-        <View style={styles.circle}> 
+        <LinearGradient
+        // Button Linear Gradient
+        colors={['#A0D995', '#4CACBC']}
+        end = {{x:.9, y:.1}}
+        style={styles.circle}>
           <Text style={styles.score}>714</Text>
-        </View>
+      </LinearGradient>
         <Text style = {styles.overview_text}>Tommy's Spending Limit:</Text>
-            
-        <View style={styles.square}> 
+        <LinearGradient
+        // Button Linear Gradient
+        colors={['#A0D995', '#4CACBC']}
+        end = {{x:0.1, y:.9}}
+
+        style={styles.square}>
           <Text style={styles.dollar_text}>${Math.floor(range*300)}</Text>
-        </View>
+      </LinearGradient>
+        
 
 
         <BottomSheet
@@ -207,8 +216,8 @@ const Example = () => {
     return <Box height='500' p="5" pb="2">
         <FlatList data={data} renderItem={({
         item
-      }) => <Box style={{backgroundColor:'orange'}} borderBottomWidth="1" _dark={{
-        borderColor: "muted.50"
+      }) => <Box style={{backgroundColor:'#F6E3C5'}} borderBottomWidth="4" borderBottomColor="white" borderRadius="2xl" _dark={{
+        borderColor: "light.50"
       }} borderColor="muted.800" pl={["2", "5"]} pr={["100", "10"]} py="2">
               <HStack space={[3, 0]} justifyContent="space-between">
                 <Avatar size="48px" source={item.image} />
@@ -274,7 +283,7 @@ const styles = StyleSheet.create({
     square:{
         width: 100,
         height: 50,
-        borderRadius: 20 / 8,
+        borderRadius: 30,
         backgroundColor: '#A0D995',
         justifyContent: 'center'
     },
@@ -307,6 +316,7 @@ const styles = StyleSheet.create({
     score:{
         fontSize:35,
         color:'white',
+        fontWeight:'bold',
         textAlign: 'center',
         alignItems:'center'
     },
